@@ -1,4 +1,4 @@
-from utils import plz_normalizer
+from src.utils import plz_normalizer
 
 
 def test_plz_normalizer():
