@@ -1,6 +1,6 @@
 from setuptools import setup
 
-install_requires = ["pandas>=0.25.0", ]
+install_requires = ["pandas>=0.25.0"]
 
 tests_requires = ["pytest>=4.0.2"]
 

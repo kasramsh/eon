@@ -15,13 +15,6 @@ def plz_normalizer(plz: Union[int, float, str]) -> str:
     -------
     string
         Normalized postal code
-
-    Raises
-    ------
-    KeyError
-        when a key error
-    OtherError
-        when an other error
     """
     plz = str(int(float(plz)))
     if len(plz) == 4:
@@ -30,8 +23,8 @@ def plz_normalizer(plz: Union[int, float, str]) -> str:
         return plz
 
 
-def remove_nans(data: pd.DataFrame, col: str) -> pd.DataFrame:
-    return data[~data[col].isna()]
+def remove_bundes_nans(data: pd.DataFrame) -> pd.DataFrame:
+    return data[~data.bundesland.isna()]
 
 
 def remove_conflicts(data: pd.DataFrame, col1: str, col2: str) -> pd.DataFrame:
